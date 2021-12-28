@@ -7,6 +7,15 @@ terraform {
   }
 }
 
+terraform {
+    backend "azurerm" {
+        resource_group_name = "BKTestStorageACRG"
+        storage_account_name = "bktfstorageaccount"
+        container_name = "bktfstate"
+        key = "terraform.tfstate"
+    }
+}
+
 provider "azurerm" {
   features {}
 }
