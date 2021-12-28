@@ -16,6 +16,12 @@ terraform {
     }
 }
 
+variable "imagebuild" {
+  type        = string
+  description = "latest image build"
+}
+
+
 provider "azurerm" {
   features {}
 }
@@ -34,7 +40,7 @@ resource "azurerm_container_group" "bktf_cg" {
     os_type = "Linux"
     container {
         name = "weatherapi"
-        image = "bismsit29/weatherapi"
+        image = "bismsit29/weatherapi:${var.imagebuild}"
         cpu  = "1" 
         memory = "1"
         ports {
