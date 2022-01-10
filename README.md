@@ -1,5 +1,5 @@
 # DotNetCoreTfAdoDemo
-demo sample for a .net core api project to host in Azure using ADO, dockerHub and TF
+demo sample for a .net core api project to host in Azure using ADO, dockerHub and Terraform
 
 To **create the project** use
 
